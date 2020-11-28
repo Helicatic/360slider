@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="content-type" content="text/html; charset-utf-8" />
+<meta name="viewport" content="width=device-width" />
+<title>360 slider</title>
+<link rel="shortcut icon" type="image/png" href="favicon.png" />
+<link href="dist/css/threesixty.css" rel="stylesheet">
+</head>
+<body>
+	<div class="threesixty car dark">
+		<div class="spinner">
+			<span>0%</span>
+		</div>
+		<ol class="threesixty_images"></ol>
+	</div>
+<script src="dist/vendor/jquery.min.js"></script>
+<script src="dist/vendor/screenfull.js"></script>
+<script src="dist/js/threesixty.js"></script>
+<script>
+$(document).ready(function() {
+	var three60 = $('.car').ThreeSixty({
+        totalFrames: 26,
+        endFrame: 26,
+        currentFrame: 1,
+        imgList: '.threesixty_images',
+        progress: '.spinner',
+        imagePath: './assets/inside-human/',
+        filePrefix: '',
+        ext: '.jpg',
+        height: 800,
+        width: 800,
+        navigation: true,
+        fullscreen: true,
+        responsive: true,
+        disableSpin: false,
+        zeroPadding: false,
+        theme: 'dark'
+	});
+});
+</script>
+</body>
+</html>
+		
+		
